@@ -1,0 +1,280 @@
+/* All sections
+----------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #292B2D;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-bottom: 20px;
+  color: #4A4E69
+}
+
+body {
+  font-size: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-launch {
+  width: 100%;
+  max-width: 175px;
+  background-color: #549657;
+  color: white;
+  box-shadow: 0px 2px 5px 1px darkgrey;
+  margin-top: 20px;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.fat {
+  font-weight: 700;
+}
+
+a {
+  color: #292B2C;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #014C8C;
+  text-decoration: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+.applications-grid--screenshot img {
+  box-shadow: 0px 2px 5px 1px darkgrey;
+}
+
+.row-blue-gradient {
+  background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+  padding: 65px 10px;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+.row-grey {
+  background: lightgrey;
+  padding: 65px 10px;
+  clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
+}
+
+.row-white {
+  padding: 65px 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* =============================================================================
+ NO CSS GRID FOR MOBILE SCREENS
+============================================================================= */
+
+/* Header
+----------------------------------------------------------------------------- */
+#header--name {
+  text-align: center;
+  margin-top: 0 !important;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+#header--hero {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 4em;
+  text-align: center;
+  color: whitesmoke;
+}
+
+#header--sub-hero {
+  font-size: 1em;
+  text-transform: uppercase;
+  line-height: 4em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #292B2D;
+}
+
+
+
+/* Applications
+----------------------------------------------------------------------------- */
+.applications--buttons {
+  text-align: center;
+}
+
+.applications--tech-stack {
+  text-align: center;
+}
+
+/* contact-grid
+----------------------------------------------------------------------------- */
+#contact--profile-pic {
+  box-shadow: 0px 4px 6px 2px ;
+  border-radius: 50%;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.contact__hide {
+  display: none;
+}
+
+.contact__center {
+  text-align: center;
+}
+
+/* =============================================================================
+ CSS GRID FOR SCREENS LARGER THAN 700px - 1100px
+============================================================================= */
+@media screen and (min-width: 600px) {
+  #contact--profile-pic {
+    box-shadow: 0px 4px 6px 2px ;
+    border-radius: 50%;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+}
+
+/* =============================================================================
+ CSS GRID FOR SCREENS LARGER THAN 1100px
+============================================================================= */
+@media screen and (min-width: 1024px) {
+
+  /* Header
+  --------------------------------------------------------------------------- */
+  .header-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr;
+    text-align: center;
+    height: 100vh;
+  }
+
+  .header-grid--hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  #header--name {
+    font-size: 4em;
+  }
+
+  #header--hero {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 7em;
+  }
+
+  #header--sub-hero {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    line-height: 0 !important;
+    letter-spacing: 0.2em;
+  }
+
+
+  /* Application
+  --------------------------------------------------------------------------- */
+  .applications-grid {
+    display: grid;
+    grid-template-columns: 0.25fr 1.25fr 2fr 0.25fr;
+    grid-gap: 2em;
+  }
+
+  .applications-grid--screenshot {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+
+  .applications-grid--description {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+
+  /* Contact
+  --------------------------------------------------------------------------- */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+  }
+
+  #contact-grid--info p,
+  #contact-grid--networks p {
+    font-size: 18px;
+    color: #292B2D;
+    font-weight: 400;
+  }
+
+  #contact--profile-pic {
+    box-shadow: 0px 4px 6px 2px ;
+    border-radius: 50%;
+    width: 80% !important;
+  }
+
+  .contact--container {
+    margin-left: 0;
+  }
+
+  .contact__center {
+    text-align: left;
+  }
+
+  .contact__hide {
+    display: block;
+  }
+
+}
